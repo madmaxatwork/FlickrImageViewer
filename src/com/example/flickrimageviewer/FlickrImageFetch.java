@@ -72,15 +72,17 @@ public class FlickrImageFetch {
                 String server = parser.getAttributeValue(null, "server");
                 String farm = parser.getAttributeValue(null, "farm");
 
-                GalleryItem item = new GalleryItem();
-                item.mId = id;
-                item.mCaption = caption;
-                item.mUrl = smallUrl;
-                item.mFarm = farm;
-                item.mSecret = secret;
-                item.mServer = server;
-                item.mOwner = owner;
-                items.add(item);
+                if(smallUrl != null) {
+                    GalleryItem item = new GalleryItem();
+                    item.mId = id;
+                    item.mCaption = caption;
+                    item.mUrl = smallUrl;
+                    item.mFarm = farm;
+                    item.mSecret = secret;
+                    item.mServer = server;
+                    item.mOwner = owner;
+                    items.add(item);                	
+                }
             }
 
             eventType = parser.next();

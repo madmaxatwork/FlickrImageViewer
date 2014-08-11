@@ -105,15 +105,15 @@ public class GalleryActivity extends Activity implements OnQueryTextListener,OnC
         final Context ctx = ctx1;
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
         builder.setCancelable(true);
-        builder.setMessage("No Connection");
-        builder.setTitle("No Connection");
-        builder.setPositiveButton("Settings", new DialogInterface.OnClickListener() {
+        builder.setMessage(R.string.no_network_dialog);
+        builder.setTitle(R.string.no_network_title);
+        builder.setPositiveButton(R.string.setting, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
             	FROM_SETTING = true;
                 ctx.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
             	GalleryActivity.this.finish();
                 return;

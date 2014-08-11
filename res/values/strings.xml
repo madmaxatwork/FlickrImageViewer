@@ -8,5 +8,10 @@
     <string name="search_hint">Search Flickr</string>
     <string name="loading_image">Loading Image ....</string>
     <string name="loading_images">Loading Images ....</string>
-
+    <string name="no_network_title">Network Connection Error</string>
+    <string name="no_network_dialog">No network connection detected....</string>
+	<string name="setting">Setting</string>
+	<string name="cancel">Cancel</string>
+	
 </resources>
+
